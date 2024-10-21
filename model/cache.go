@@ -32,7 +32,7 @@ func CacheGetTokenByKey(key string) (*Token, error) {
 	}
 	var token Token
 	if !common.RedisEnabled {
-//		err := DB.Where(keyCol+" = ?", key).First(&token).Error
+		err := DB.Where(keyCol+" = ?", key).First(&token).Error
 
 		return &token, err
 	}
